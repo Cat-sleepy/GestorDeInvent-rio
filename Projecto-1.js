@@ -11,8 +11,8 @@ const inventario = [
 
 
 
-const filterInventario = inventario.filter((stock) => {
-    return stock.emStock === true
+const filterInventario = inventario.filter((produto) => {
+    return produto.emStock === true && produto.preco <100
 })
 
 console.log(filterInventario)
