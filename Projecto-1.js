@@ -11,3 +11,8 @@ const inventario = [
 
 
 
+const filterInventario = inventario.filter((stock) => {
+    return stock.emStock === true
+})
+
+console.log(filterInventario)
