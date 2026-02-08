@@ -61,9 +61,24 @@ const inventario = [
 
 
 
-const precoComIva = inventario.map(produto => {
-  return produto.preco * 1.23;
-});
+// const precoComIva = inventario.map(produto => {
+//   return produto.preco * 1.23;
+// });
+
+
+
+
+//------------------------------------------------------------------------
+
+
+
+
+const soma = inventario.reduce((total, produto) => {
+  return total + produto.preco;
+}, 0);
+
+console.log(soma);
+
 
 
 
