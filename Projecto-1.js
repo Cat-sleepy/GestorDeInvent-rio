@@ -18,10 +18,44 @@ const inventario = [
 // console.log(filterInventario)
 
 
-const produtosSemStock = inventario.filter(produto => !produto.emStock);
 
-const nomesSemStock = produtosSemStock.map(produto => produto.nome);
 
-console.log(nomesSemStock);
+//----------------------------------------------------------------------------
+
+
+
+
+// const produtosSemStock = inventario.filter(produto => !produto.emStock);
+
+// const nomesSemStock = produtosSemStock.map(produto => produto.nome);
+
+// console.log(nomesSemStock);
+
+
+
+
+//------------------------------------------------------------------------
+
+
+
+
+
+const existeSemStock = inventario.some(produto => !produto.emStock);
+
+if (existeSemStock) {
+  const produtosSemStock = inventario.filter(produto => !produto.emStock);
+
+  console.log("Existem produtos sem stock:");
+  produtosSemStock.forEach(produto =>
+    console.log(`- ${produto.nome}`)
+  );
+} else {
+  console.log("Todos os produtos estão em stock.");
+}
+
+
+
+
+
 
 
